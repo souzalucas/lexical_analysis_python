@@ -75,19 +75,16 @@ def t_ID(t):
 # Expressão regular para notacao cientifica
 def t_NUM_NOTACAO_CIENTIFICA(t):
     r'([+-]?([0-9]+[.]([0-9]*)?|[.][0-9]+)|([0-9]+))([eE][-+]?\d+)'
-    # t.value = float(t.value)    
     return t
 
 # Expressão regular para numeros de ponto flutuante
 def t_NUM_PONTO_FLUTUANTE(t):
     r'[+-]?([0-9]+[.]([0-9]*)?|[.][0-9]+)'
-    # t.value = float(t.value)    
     return t
     
 # Expressão regular para numero inteiro
 def t_NUM_INTEIRO(t):
     r'[-\+]?[0-9]+'
-    # t.value = int(t.value)    
     return t
 
 # Expressão regular para quebra de linha
@@ -97,18 +94,17 @@ def t_NOVA_LINHA(t):
  
 # Erro
 def t_error(t):
-    print("Illegal character '%s'" % t.value[0])
+    print("Caractere Ilegal '%s'" % t.value[0])
     t.lexer.skip(1)
- 
 
-def imprimeTokens(dados):
+def geraTokens(dados):
     # Construindo o lexer
     lexer = lex.lex()
 
     # Atribuindo os dados ao lexer
     lexer.input(dados)
     
-    # Gerando tokens
+    # Imprimindo tokens
     while True:
         tok = lexer.token()
         if not tok: 
@@ -119,6 +115,6 @@ def main():
     nome_arquivo = sys.argv[1]
     arquivo = open(nome_arquivo, "r")
     string_arquivo = arquivo.read()
-    imprimeTokens(string_arquivo)
+    geraTokens(string_arquivo)
 
 main()
