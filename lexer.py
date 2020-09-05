@@ -97,6 +97,11 @@ def t_error(t):
     print("Caractere Ilegal '%s'" % t.value[0])
     t.lexer.skip(1)
 
+# Função para imprimir os tokens
+def imprimeToken(valor, tipo):
+    print(valor, ":", tipo)
+
+# Função para gerar tokens
 def geraTokens(dados):
     # Construindo o lexer
     lexer = lex.lex()
@@ -109,12 +114,17 @@ def geraTokens(dados):
         tok = lexer.token()
         if not tok: 
             break
-        print(tok.value, ":", tok.type)
+        imprimeToken(tok.value, tok.type)
 
 def main():
+    # Arquivo do codigo a ser analisado
     nome_arquivo = sys.argv[1]
+
+    # Abrindo e lendo arquivo
     arquivo = open(nome_arquivo, "r")
     string_arquivo = arquivo.read()
+    
+    # Gerando tokens
     geraTokens(string_arquivo)
 
 main()
