@@ -62,7 +62,7 @@ def t_ATE(t):
 
 # Expressão regular para comentarios
 def t_COMENTARIO(t):
-    r'\{([\w\s]*)\}'
+    r'\{[^\}]+?\}'
     t.type = reservadas.get(t.value,'COMENTARIO')
     return t
     
