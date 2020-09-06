@@ -281,7 +281,7 @@ retorna : ID
 fim : ID
 ```
 
-Mais outro exemplo de varredura, com o arquivo `bubble_sort.tpp`.
+Mais outro exemplo de varredura, com o arquivo `fat.tpp`.
 
 Entrada:
 
