@@ -126,16 +126,16 @@ reservadas = {
 'então' 	: 'ENTAO'
 }
 ```
-Logo após, uma lista com todos os tokens da linguagem.
+Logo após, foi criada uma lista com todos os tokens da linguagem.
 
 ```python
 tokens = ['MAIS', 'MENOS', 'MULTIPLICACAO', 'DIVISAO', 
-'DOIS_PONTOS', 'VIRGULA', 'MENOR', 'MAIOR', 'IGUAL', 
-'DIFERENTE', 'MENOR_IGUAL', 'MAIOR_IGUAL', 'E_LOGICO', 
-'OU_LOGICO', 'NEGACAO', 'ABRE_PARENTESE', 'FECHA_PARENTESE', 
-'ABRE_COLCHETE', 'FECHA_COLCHETE', 'ATRIBUICAO', 'NUM_INTEIRO', 
-'NUM_PONTO_FLUTUANTE', 'NUM_NOTACAO_CIENTIFICA', 'ID', 
-'COMENTARIO'] + list(reservadas.values())
+          'DOIS_PONTOS', 'VIRGULA', 'MENOR', 'MAIOR', 
+          'IGUAL', 'DIFERENTE', 'MENOR_IGUAL', 'MAIOR_IGUAL', 
+          'E_LOGICO', 'OU_LOGICO', 'NEGACAO', 'ABRE_PARENTESE', 
+          'FECHA_PARENTESE', 'ABRE_COLCHETE', 'FECHA_COLCHETE', 
+          'ATRIBUICAO', 'NUM_INTEIRO', 'NUM_PONTO_FLUTUANTE', 
+          'NUM_NOTACAO_CIENTIFICA', 'ID', 'COMENTARIO'] + list(reservadas.values())
 ```
 
 A partir daí, é necessário definirmos as expressões regulares de cada token, por exemplo:
