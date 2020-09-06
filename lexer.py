@@ -28,8 +28,8 @@ t_DOIS_PONTOS       = r':'
 t_VIRGULA           = r','
 t_MENOR             = r'<'
 t_MAIOR             = r'>'
-t_IGUAL             = r'=='
-t_DIFERENTE         = r'!='
+t_IGUAL             = r'='
+t_DIFERENTE         = r'<>'
 t_MENOR_IGUAL       = r'<='
 t_MAIOR_IGUAL       = r'>='
 t_E_LOGICO          = r'\&\&'
@@ -39,8 +39,13 @@ t_ABRE_PARENTESE    = r'\('
 t_FECHA_PARENTESE   = r'\)'
 t_ABRE_COLCHETE     = r'\['
 t_FECHA_COLCHETE    = r'\]'
-t_ATRIBUICAO        = r'='
+t_ATRIBUICAO        = r':='
 t_ignore            = ' \t'   # espacos e tabulacoes
+t_ID = r'[a-zA-Z_]+[a-zA-Z_0-9]*'
+t_COMENTARIO = r'\{[^\}]+?\}'
+t_NUM_INTEIRO = r'[-\+]?[0-9]+'
+t_NUM_PONTO_FLUTUANTE = r'[+-]?([0-9]+[.]([0-9]*)?|[.][0-9]+)'
+t_NUM_NOTACAO_CIENTIFICA = r'([+-]?([0-9]+[.]([0-9]*)?|[.][0-9]+)|([0-9]+))([eE][-+]?\d+)'
 
 # Expressão Regular para a palavra reservada 'senão'
 def t_SENAO(t):
@@ -59,34 +64,7 @@ def t_ATE(t):
     r'até'
     t.type = reservadas.get(t.value,'ATE')
     return t
-
-# Expressão regular para comentarios
-def t_COMENTARIO(t):
-    r'\{[^\}]+?\}'
-    t.type = reservadas.get(t.value,'COMENTARIO')
-    return t
     
-# Expressão regular para IDs
-def t_ID(t):
-    r'[a-zA-Z_]+[a-zA-Z_0-9]*'
-    t.type = reservadas.get(t.value,'ID')
-    return t
-
-# Expressão regular para notacao cientifica
-def t_NUM_NOTACAO_CIENTIFICA(t):
-    r'([+-]?([0-9]+[.]([0-9]*)?|[.][0-9]+)|([0-9]+))([eE][-+]?\d+)'
-    return t
-
-# Expressão regular para numeros de ponto flutuante
-def t_NUM_PONTO_FLUTUANTE(t):
-    r'[+-]?([0-9]+[.]([0-9]*)?|[.][0-9]+)'
-    return t
-    
-# Expressão regular para numero inteiro
-def t_NUM_INTEIRO(t):
-    r'[-\+]?[0-9]+'
-    return t
-
 # Expressão regular para quebra de linha
 def t_NOVA_LINHA(t):
     r'\n+'
