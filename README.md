@@ -2,7 +2,7 @@
 
 ## Linguagem de programação T++
 
- ### BNF Comentada
+### Sintaxe da linguagem usando a gramática BNF
 
 |||
 |-:|-|
@@ -45,6 +45,24 @@
 
 ## Especificação formal dos autômatos para a formação de cada classe de token da linguagem
 Explicar cada expressão regular, lista de palavras reservadas e lista de tokens
+
+### Palavras reservadas
+Abaixo temos as palavras reservadas da linguagem e seus respectivos tokens.
+
+|Palavra reservada|Token|
+|:-|:-|
+|se|SE|
+|repita|REPITA|
+|fim|FIM|
+|leia|LEIA|
+|retorna|RETORNA|
+|escreva|ESCREVA|
+|inteiro|INTEIRO|
+|flutuante|FLUTUANTE|
+|até|ATE|
+|senão|SENAO|
+|então|ENTAO|
+
 
 ## Detalhes da implementação da varredura na LP e ferramenta (e/ou bibliotecas) escolhidas
 Explicar como foi usada a biblioteca lex, e seu funcionamento
