@@ -49,7 +49,7 @@ Explicar cada expressão regular, lista de palavras reservadas e lista de tokens
 ### Palavras reservadas
 Abaixo temos as palavras reservadas da linguagem e seus respectivos tokens.
 
-|Palavra reservada|Token|
+|PALAVRA RESERVADA|TOKEN|
 |:-|:-|
 |se|SE|
 |repita|REPITA|
@@ -63,6 +63,48 @@ Abaixo temos as palavras reservadas da linguagem e seus respectivos tokens.
 |senão|SENAO|
 |então|ENTAO|
 
+### Expressões regulares
+
+Abaixo temos as expressões regulares de cada token da linguagem.
+
+|EXPRESSÃO REGULAR|TOKEN|
+|:-|:-|
+|r'\+'|MAIS|
+|r'-'|MENOS|
+|r'\*'|MULTIPLICACAO|
+|r'/' |DIVISAO|
+|r':'|DOIS_PONTOS|
+|r','|VIRGULA|
+|r'<'|MENOR|
+|r'>'|MAIOR|
+|r'='|IGUAL|
+|r'<>'|DIFERENTE|
+|r'<='|MENOR_IGUAL|
+|r'>='|MAIOR_IGUAL|
+|r'\\&\\&'|E_LOGICO|
+|r'\\\|\\\|'|OU_LOGICO|
+|r'!'|NEGACAO|
+|r'\\('|ABRE_PARENTESE|
+|r'\\)'|FECHA_PARENTESE|
+|r'\\['|ABRE_COLCHETE|
+|r'\\]'|FECHA_COLCHETE| 
+|r'\\{[^\\}]+?\\}'|COMENTARIO|
+|r'[a-zA-Z_]+[a-zA-Z_0-9]*'|ID|
+|r'[-\+]?[0-9]+'|NUM_INTEIRO|
+|r'[+-]?([0-9]+[.]([0-9]*)?\|[.][0-9]+)'|NUM_PONTO_FLUTUANTE|
+|r'([+-]?([0-9]+[.]([0-9]*)?\|[.][0-9]+)\|([0-9]+))([eE][-+]?\d+)'|NUM_NOTACAO_CIENTIFICA|
+|r'se'|SE|
+|r'então'|ENTAO|
+|r'senão'|SENAO|
+|r'fim'|FIM|
+|r'repita'|REPITA|
+|r'até'|ATE|
+|r':='|ATRIBUICAO|
+|r'leia'|LEIA|
+|r'escreva'|ESCREVA|
+|r'retorna'|RETORNA|
+|r'inteiro'|INTEIRO|
+|r'flutuante'|FLUTUANTE|
 
 ## Detalhes da implementação da varredura na LP e ferramenta (e/ou bibliotecas) escolhidas
 Explicar como foi usada a biblioteca lex, e seu funcionamento
