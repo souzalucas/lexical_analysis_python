@@ -286,7 +286,7 @@ Mais outro exemplo de varredura, com o arquivo `bubble_sort.tpp`.
 Entrada:
 
 ```python
-<inteiro: vet[10]
+inteiro: vet[10]
 inteiro: tam
 
 tam := 10
